@@ -1,5 +1,4 @@
-def count_routes(n, m):
-    # Создаем матрицу для хранения количества маршрутов до каждой точки
+def count_routes(n, m):
     routes = [[0] * m for _ in range(n)]
 
 
