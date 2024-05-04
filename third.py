@@ -1,9 +1,6 @@
-def count_routes(n, m):
+def count_routes(n, m):
     routes = [[0] * m for _ in range(n)]
-
-
     routes[0][0] = 1
-
 
     for i in range(n):
         for j in range(m):
@@ -12,8 +9,11 @@ def count_routes(n, m):
 
     return routes[n - 1][m - 1]
 
+def get_user_input():
+    n = int(input("number of lines: "))
+    m = int(input("number of columns: "))
+    return n, m
 
-n = int(input("number of lines: "))
-m = int(input("number of columns: "))
-
-print(f"number of routes from A to B: {count_routes(n, m)}")
+if __name__ == "__main__":
+    n, m = get_user_input()
+    print(f"number of routes from A to B: {count_routes(n, m)}")

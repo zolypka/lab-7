@@ -17,8 +17,12 @@ def min_edit_distance(s1, s2):
 
     return dp[m][n]
 
-string1 = input("first string: ")
-string2 = input("second string: ")
+def get_user_input():
+    string1 = input("first string: ")
+    string2 = input("second string: ")
+    return string1, string2
 
-result = min_edit_distance(string1, string2)
-print(f"min number of operations to convert '{string1}' into '{string2}': {result}")
+if __name__ == "__main__":
+    string1, string2 = get_user_input()
+    result = min_edit_distance(string1, string2)
+    print(f"min number of operations to convert '{string1}' into '{string2}': {result}")
